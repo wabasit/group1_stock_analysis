@@ -62,20 +62,11 @@ class DataCleaning_and_EDA_pipeline:
 
 file_path = "/Users/gyauk/Desktop/DataEngineering/stockanalysis/cleaned-stocks.parquet"  
 Pline = DataCleaning_and_EDA_pipeline(file_path)
-# Pline.view_data()
-# Pline.check_missing_values()
-# Pline.handle_missing_values()
-# Pline.data_description()
-# Pline.date_timeconv()
+Pline.view_data()
+Pline.check_missing_values()
+Pline.handle_missing_values()
+Pline.data_description()
+Pline.date_timeconv()
 # Pline.data_visualization()
 
-df_cleaned = Pline.df 
-
-
-def moving_average(df, column='close', window=200):
-     return df[column].rolling(window=window).mean()
- 
-
-df_cleaned_MA = moving_average(df_cleaned, column='close', window=200)
-print("The Moving Averages are below\n", df_cleaned_MA)
 
