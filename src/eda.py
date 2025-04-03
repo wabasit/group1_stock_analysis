@@ -50,3 +50,5 @@ The highest was 18 billion shares, suggesting extreme variations in trading acti
     print(top5)
     bottom5 = data.nsmallest(5, 'close')
     print(bottom5)
+
+print(data)
