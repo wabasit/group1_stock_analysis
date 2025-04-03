@@ -31,11 +31,11 @@ def load_and_clean_data(stocks_dir):
                 IQR = Q3 - Q1
                 lower_bound = Q1 - 1.5 * IQR
                 upper_bound = Q3 + 1.5 * IQR
-                df = df[(df[col] >= lower_bound) & (df[col] <= upper_bound)]
+                df = df[(df[col] >= lower_bound) & (df[col] <= upper_bound)] if not df.empty else df
             all_data.append(df)  # Append the cleaned DataFrame
 
     # Combine all data into a single DataFrame
-    combined_df = pd.concat(all_data)
+    combined_df = pd.concat(all_data, ignore_index=True)
 
     # Standadrdize column names
     combined_df.columns = combined_df.columns.str.lower().str.replace(' ', '_')
