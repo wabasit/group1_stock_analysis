@@ -70,3 +70,12 @@ Pline.date_timeconv()
 # Pline.data_visualization()
 
 
+df_cleaned = Pline.df 
+
+
+def moving_average(df, column='close', window=200):
+     return df[column].rolling(window=window).mean()
+ 
+
+df_cleaned_MA = moving_average(df_cleaned, column='close', window=200)
+print("The Moving Averages are below\n", df_cleaned_MA)
