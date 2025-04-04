@@ -16,6 +16,10 @@ class TestDataProcessingFunctions(unittest.TestCase):
         stock_price = [200,300,400,500]
         output = [300,400]
         self.assertEqual(moving_average(stock_price, window=2), output, 'Incorrect Moving average')
-        
+
+    def test_insufficient_data_MA(self):
+        stock_price = [200,300]
+        self.assertEqual(moving_average(stock_price, window=2), [], 'Should return empty list')
+
 if __name__=='__main__':
     unittest.main()
