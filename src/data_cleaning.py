@@ -35,7 +35,7 @@ def load_and_clean_data(stocks_dir):
             all_data.append(df)  # Append the cleaned DataFrame
 
     # Combine all data into a single DataFrame
-    combined_df = pd.concat(all_data, ignore_index=True)
+    combined_df = pd.concat(all_data, ignore_index=False)
 
     # Standadrdize column names
     combined_df.columns = combined_df.columns.str.lower().str.replace(' ', '_')
