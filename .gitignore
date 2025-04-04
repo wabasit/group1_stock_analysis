@@ -1,6 +1,0 @@
-data/stocks
-data/etfs
-data/symbols_valid_meta.csv
-data/cleaned-stocks.parquet
-.gitattributes
-.gitignore

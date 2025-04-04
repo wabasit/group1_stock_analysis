@@ -47,4 +47,4 @@ df = load_and_clean_data('data/stocks/')
 # df.to_csv('data/cleaned_stocks.csv', index=False)
 df.to_parquet('data/cleaned-stocks.parquet', engine='pyarrow', index=False)  # Save as Parquet file
 print(df.head()) 
-print("Shape: ", df.shape)
+print("Shape:  ", df.shape)
